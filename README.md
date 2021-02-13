@@ -22,13 +22,13 @@ The input will contain a sequence of commands (as described below), each on a se
 ### Command Syntax 
 #### Interpretation/Response 
 
-**DEPEND item1 item2 [item3 ...]** item1 depends on item2 (and item1 depends on item3 ...) 
+**DEPEND item1 item2 [item3 ...]** -- item1 depends on item2 (and item1 depends on item3 ...) 
 
-**INSTALL item1** install item1 and those on which it depends 
+**INSTALL item1** -- install item1 and those on which it depends 
 
-**REMOVE item1** remove item1, and those on whch it depends, if possible 
+**REMOVE item1** -- remove item1, and those on whch it depends, if possible 
 
-**LIST** list the names of all currently-installed components 
+**LIST** -- list the names of all currently-installed components 
 
 ### Output
 Echo each line of input. Follow each echoed INSTALL or REMOVE line with the actions taken in response, making certain that the actions are given in the proper order. Also identify exceptional conditions (see Expected Output, below, for examples of all cases). For the LIST command, display the names of the currently installed components. No output, except the echo, is produced for a DEPEND command or the line containing END. There will be at most one dependency list per item. 
